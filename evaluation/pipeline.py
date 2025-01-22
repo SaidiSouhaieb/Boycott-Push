@@ -11,8 +11,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 def main(add_new_model, show, model_version):
     if add_new_model:
         print("Moving model")
-        source_dir = "../finetuning/runs/detect"
-        target_base_dir = "core/model/"
+        source_dir = "training/runs/detect"
+        target_base_dir = "model/"
         move_model(source_dir, target_base_dir)
         print("Model moved")
 
