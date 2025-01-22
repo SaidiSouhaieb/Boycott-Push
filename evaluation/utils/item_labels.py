@@ -1,0 +1,18 @@
+ITEM_LABELS = {
+    "0.0": "KFC",
+    "1.0": "Fanta",
+    "2.0": "Pepsi",
+    "3.0": "Danone",
+    "4.0": "Adidas",
+    "5.0": "McDonald",
+    "6.0": "Zara",
+    "7.0": "Chanel",
+    "8.0": "Starbucks",
+    "9.0": "Sprite",
+    "10.0": "7up",
+    "11.0": "Carrefour",
+    "12.0": "HP",
+    "13.0": "Dominos Pizza",
+    "14.0": "KitKat",
+    "15.0": "PapaJohns",
+}

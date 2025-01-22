@@ -1,0 +1,12 @@
+data
+finetuning/v*
+training/runs
+inference/model/v*
+__pycache__/
+*.pyc
+
+model/*
+training/runs
+
+.runs/
+runs/
