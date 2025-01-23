@@ -5,6 +5,7 @@ import shutil
 def move_model(source_dir, target_base_dir):
     new_folders = []
     train_folders = [f for f in os.listdir(source_dir) if f.startswith("train")]
+    print(train_folders, "train folder\n\n")
     for folder in train_folders:
         if folder != "train":
             new_folders.append(int(folder.replace("train", "")))
@@ -38,3 +39,5 @@ def move_model(source_dir, target_base_dir):
     shutil.move(best_model_path, os.path.join(new_v_folder, "best.pt"))
 
     print(f"Moved best.pt to {new_v_folder}")
+
+    return f"v{new_v_folder_num}"

@@ -11,9 +11,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 def main(add_new_model, show, model_version):
     if add_new_model:
         print("Moving model")
-        source_dir = "training/runs/detect"
+        source_dir = "runs/detect"
         target_base_dir = "model/"
-        move_model(source_dir, target_base_dir)
+        model_version = move_model(source_dir, target_base_dir)
         print("Model moved")
 
     print("Starting Evaluation")
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         main(
             add_new_model=args.new,
             show=(args.show if args.show is not None else True),
-            model_version=args.mv,
+            model_version=f"v{args.mv}",
         )
 
     except argparse.ArgumentTypeError as e:

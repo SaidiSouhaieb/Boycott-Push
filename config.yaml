@@ -1,4 +1,4 @@
-path: data/v4/
+path: data/v1/
 train: images/train
 val: images/valid
 nc: 16

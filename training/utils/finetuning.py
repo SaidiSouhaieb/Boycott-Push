@@ -44,12 +44,13 @@ def train(data_version, number_epochs):
             raise FileNotFoundError(f"Model file not found at {model_path}")
 
         model = YOLO(model_path)
+        model.to("cuda")
         model.nc = 16
 
         change_config_version(data_version, yaml_path)
 
         print(f"Starting training for {number_epochs} epochs...")
-        model.train(data=yaml_path, epochs=number_epochs)
+        model.train(data=yaml_path, epochs=number_epochs, batch=6,)
 
     except FileNotFoundError as e:
         print(f"Error: {e}")

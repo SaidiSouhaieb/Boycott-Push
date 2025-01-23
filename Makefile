@@ -4,7 +4,7 @@ MODEL_VERSION ?= v4
 SHOW ?= True
 NEW_ARG ?= --new
 DATA_VERSION ?= 1
-EPOCHS ?= 10
+EPOCHS ?= 50
 
 new-evaluate:
 	@echo "Evaluating the pipeline with new argument"
